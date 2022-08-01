@@ -36,10 +36,11 @@ public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @Basic(optional = false)
     @NotNull
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     @Basic(optional = false)
     @NotNull
     @Size(max = 255)
@@ -61,6 +62,20 @@ public class Usuario implements Serializable {
     @Size(max = 255)
     @Column(name = "nombre")
     private String nombre;
+
+    public Usuario(String mensaje) {
+        this.mensaje = mensaje;
+    }
+
+    @Column(name = "uri_foto", columnDefinition = "TEXT")
+    private String uriFoto;
+    
+    @Column(name = "uri_cedula", columnDefinition = "TEXT")
+    private String uriCedula;    
+    
+    private String mensaje;
+    
+    
 
     public Usuario() {
     }
@@ -107,6 +122,30 @@ public class Usuario implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getUriFoto() {
+        return uriFoto;
+    }
+
+    public void setUriFoto(String uriFoto) {
+        this.uriFoto = uriFoto;
+    }
+
+    public String getUriCedula() {
+        return uriCedula;
+    }
+
+    public void setUriCedula(String uriCedula) {
+        this.uriCedula = uriCedula;
+    }
+
+    public String getMensaje() {
+        return mensaje;
+    }
+
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
     }
 
     @Override

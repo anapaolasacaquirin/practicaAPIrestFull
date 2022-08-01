@@ -93,6 +93,18 @@
 	  <version>2.7.9</version>
 	  <scope>provided</scope>
 	 </dependency>
+         <dependency>
+	  <groupId>com.amazonaws</groupId>
+	  <artifactId>aws-java-sdk-s3</artifactId>
+	  <version>1.11.714</version>
+	  <type>jar</type>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey.contribs</groupId>
+	  <artifactId>jersey-multipart</artifactId>
+	  <version>1.19.4</version>
+	  <type>jar</type>
+	 </dependency>
 	</dependencies>
 
 	<build>
